@@ -1,20 +1,10 @@
 package main
 
-import (
-	"bufio"
-	"fmt"
-	"os"
-)
-
-
-func greet() {
-	reader := bufio.NewReader(os.Stdout)
-	var name string
-	print("Please enter your name: ")
-	name, _ =  reader.ReadString('\n')
-	fmt.Print("Lovely to meet you ", name)
-}
+import "fmt"
 
 func main() {
-	greet()
+	fmt.Print("Please enter your name: ")
+	var name string
+	fmt.Scan(&name)
+	fmt.Print("Lovely to meet you " + name + "\n")
 }
